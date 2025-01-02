@@ -22,17 +22,15 @@ body {
 		padding: 30px 65px;
 		font-size: 20px;
 		color: #fff;
+		border-radius: 8px;
 	}
 }
 
 .button-1 {
 	position: relative;
 	background: transparent;
-	border: none;
-	border-radius: 8px;
 	overflow: hidden;
 	z-index: 1;
-	cursor: heart;
 	&::before {
 		content: "";
 		position: absolute;
@@ -51,8 +49,6 @@ body {
 
 .button-2 {
 	background: #00d9ff;
-	border: none;
-	border-radius: 8px;
 	cursor: pointer;
 	position: relative;
 	overflow: hidden;
@@ -63,7 +59,7 @@ body {
 		left: 50%;
 		width: 0;
 		height: 0;
-		background: rgba(98, 0, 234, 0.5);
+		background: rgba(5, 61, 183, 0.5);
 		border-radius: 50%;
 		transform: translate(-50%, -50%);
 		transition:
@@ -81,9 +77,6 @@ body {
 
 .button-3 {
 	background: #036fda;
-	border: none;
-	border-radius: 8px;
-	cursor: pointer;
 	position: relative;
 	overflow: hidden;
 	&::before {
