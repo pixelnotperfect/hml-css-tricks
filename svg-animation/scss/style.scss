@@ -1,0 +1,51 @@
+@use "sass:math";
+
+@import "_fonts.scss";
+
+@import "_reset.scss";
+
+body {
+	background-color: rgb(2, 0, 3);
+	color: #fff;
+}
+
+.page {
+	padding-top: 300px;
+	&__container {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+}
+.item-page {
+	width: 300px;
+	padding: 20px;
+	flex-shrink: 0;
+	position: relative;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	svg {
+		position: absolute;
+		width: 100%;
+		top: 50%;
+		left: 0;
+		transform: translateY(-50%);
+		animation: draw 4s ease-in-out;
+		@keyframes draw {
+			from {
+				stroke-dasharray: 1597.0335693359375;
+				stroke-dashoffset: 1597.0335693359375;
+			}
+			to {
+				stroke-dasharray: 1597.0335693359375;
+				stroke-dashoffset: 0;
+			}
+		}
+	}
+
+	&__text {
+		font-size: 45px;
+		color: #fff;
+	}
+}
