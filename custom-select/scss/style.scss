@@ -1,0 +1,64 @@
+@use "sass:math";
+
+@import "_fonts.scss";
+
+@import "_reset.scss";
+
+body {
+	background-color: rgb(2, 0, 3);
+	color: #fff;
+}
+
+.page {
+	padding-top: 300px;
+	&__container {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+}
+.custom-select {
+	width: fit-content;
+	position: relative;
+	cursor: pointer;
+	justify-self: flex-end;
+	margin-bottom: 16px;
+	&__trigger {
+		border: 2px solid #00e5ff;
+		padding: 9px 16px;
+		font-size: 18px;
+		font-weight: 600;
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		gap: 15px;
+	}
+	&__options {
+		position: absolute;
+		top: 100%;
+		left: 0;
+		right: 0;
+		background-color: #04879f;
+		border-left: 1px solid #007bff;
+		border-right: 1px solid #007bff;
+		border-bottom: 1px solid #007bff;
+		overflow-y: auto;
+		display: none;
+		z-index: 10;
+	}
+	&__option {
+		font-size: 18px;
+		font-weight: 600;
+		padding: 9px 16px;
+		transition:
+			background-color 0.3s,
+			color 0.3s;
+		&:hover {
+			background-color: rgb(0, 153, 255);
+		}
+	}
+}
+
+.custom-select.open .custom-select__options {
+	display: block;
+}
