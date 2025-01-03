@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="css/style.css">
+	<title>Text path animation</title>
+</head>
+
+<body>
+	<div class="wrapper">
+		<header class="header">
+
+		</header>
+		<main class="page">
+			<div class="page__item">
+				<div class="page__rotation">
+					<div class="page__rotate-text">
+						<svg viewBox="0 0 220 220">
+							<path id="curve" d="M 110 110,  m -90, 0 a 90,90 0 1,1 180,0 a 90,90 0 1,1 -180,0"
+								fill="transparent">
+							</path>
+							<text>
+								<textPath xlink:href="#curve" style="font-size: 22.5px ">
+									Rotate Me - Rotate Me - Rotate Me - Rotate Me - Rotate Me -
+								</textPath>
+							</text>
+						</svg>
+					</div>
+				</div>
+			</div>
+		</main>
+		<footer class="footer">
+
+		</footer>
+		<script src="js/script.js"></script>
+	</div>
+</body>
+
+</html>
