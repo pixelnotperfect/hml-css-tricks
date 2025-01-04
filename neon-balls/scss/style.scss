@@ -1,0 +1,59 @@
+@import "_fonts.scss";
+
+@import "_reset.scss";
+
+body {
+	background-color: rgb(2, 0, 3);
+}
+
+.page {
+	padding-top: 320px;
+	display: flex;
+	justify-content: center;
+}
+
+.animation {
+	display: flex;
+	gap: 20px;
+	&__neon-ball {
+		width: 40px;
+		height: 40px;
+		background: radial-gradient(circle, #ff00ff, #ff0088, transparent);
+		border-radius: 50%;
+		box-shadow:
+			0 0 15px #ff00ff,
+			0 0 30px #ff00ff;
+		animation: jump 1.5s ease-in-out infinite;
+		&:nth-child(2) {
+			background: radial-gradient(circle, #00ffff, #0088ff, transparent);
+			box-shadow:
+				0 0 15px #00ffff,
+				0 0 30px #00ffff;
+			animation-delay: 0.2s;
+		}
+		&:nth-child(3) {
+			background: radial-gradient(circle, #ffff00, #ffaa00, transparent);
+			box-shadow:
+				0 0 15px #ffff00,
+				0 0 30px #ffff00;
+			animation-delay: 0.4s;
+		}
+		&:nth-child(4) {
+			background: radial-gradient(circle, #00ff00, #00aa00, transparent);
+			box-shadow:
+				0 0 15px #00ff00,
+				0 0 30px #00ff00;
+			animation-delay: 0.6s;
+		}
+	}
+}
+
+@keyframes jump {
+	0%,
+	100% {
+		transform: translateY(0);
+	}
+	50% {
+		transform: translateY(-100px);
+	}
+}
