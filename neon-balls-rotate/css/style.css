@@ -1,0 +1,187 @@
+@import url("https://fonts.googleapis.com/css?family=Poppins:regular,500,600,700&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Prosto+One:regular&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Roboto:regular,700&display=swap");
+@font-face {
+  font-family: "icons";
+  src: url("../fonts/icons.woff2") format("woff2"), url("../fonts/icons.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+*,
+*::before,
+*::after {
+  padding: 0;
+  margin: 0;
+  border: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+*::before,
+*::after {
+  display: inline-block;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+  display: inline-block;
+}
+
+li {
+  list-style: none;
+}
+
+img {
+  vertical-align: top;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: inherit;
+  font-size: inherit;
+}
+
+html,
+body {
+  line-height: 1;
+  height: 100%;
+}
+
+/* FORM */
+input,
+button,
+textarea {
+  font-family: inherit;
+  font-size: inherit;
+  line-height: inherit;
+  color: inherit;
+  background-color: transparent;
+}
+
+input,
+textarea {
+  width: 100%;
+}
+
+button,
+select,
+option {
+  cursor: pointer;
+}
+
+input[type=text],
+input[type=email],
+input[type=tel],
+textarea {
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+}
+
+body {
+  background-color: rgb(2, 0, 3);
+}
+
+.page {
+  padding-top: 320px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.animation {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 20px;
+  position: relative;
+  width: 300px;
+  height: 300px;
+}
+.animation__neon-ball {
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  background: radial-gradient(circle, #ff00ff, #ff0088, transparent);
+  border-radius: 50%;
+  -webkit-box-shadow: 0 0 15px #ff00ff, 0 0 30px #ff00ff;
+          box-shadow: 0 0 15px #ff00ff, 0 0 30px #ff00ff;
+  -webkit-animation: move-ball 5s linear infinite;
+          animation: move-ball 5s linear infinite;
+}
+.animation__neon-ball:nth-child(2) {
+  background: radial-gradient(circle, #00ffff, #0088ff, transparent);
+  -webkit-box-shadow: 0 0 15px #00ffff, 0 0 30px #00ffff;
+          box-shadow: 0 0 15px #00ffff, 0 0 30px #00ffff;
+  -webkit-animation-delay: 1.25s;
+          animation-delay: 1.25s;
+}
+.animation__neon-ball:nth-child(3) {
+  background: radial-gradient(circle, #ffff00, #ffaa00, transparent);
+  -webkit-box-shadow: 0 0 15px #ffff00, 0 0 30px #ffff00;
+          box-shadow: 0 0 15px #ffff00, 0 0 30px #ffff00;
+  -webkit-animation-delay: 2.5s;
+          animation-delay: 2.5s;
+}
+.animation__neon-ball:nth-child(4) {
+  background: radial-gradient(circle, #00ff00, #00aa00, transparent);
+  -webkit-box-shadow: 0 0 15px #00ff00, 0 0 30px #00ff00;
+          box-shadow: 0 0 15px #00ff00, 0 0 30px #00ff00;
+  -webkit-animation-delay: 3.75s;
+          animation-delay: 3.75s;
+}
+
+@-webkit-keyframes move-ball {
+  0% {
+    -webkit-transform: translate(0, 0);
+            transform: translate(0, 0);
+  }
+  25% {
+    -webkit-transform: translate(100px, 0);
+            transform: translate(100px, 0);
+  }
+  50% {
+    -webkit-transform: translate(100px, 100px);
+            transform: translate(100px, 100px);
+  }
+  75% {
+    -webkit-transform: translate(0, 100px);
+            transform: translate(0, 100px);
+  }
+  100% {
+    -webkit-transform: translate(0, 0);
+            transform: translate(0, 0);
+  }
+}
+
+@keyframes move-ball {
+  0% {
+    -webkit-transform: translate(0, 0);
+            transform: translate(0, 0);
+  }
+  25% {
+    -webkit-transform: translate(100px, 0);
+            transform: translate(100px, 0);
+  }
+  50% {
+    -webkit-transform: translate(100px, 100px);
+            transform: translate(100px, 100px);
+  }
+  75% {
+    -webkit-transform: translate(0, 100px);
+            transform: translate(0, 100px);
+  }
+  100% {
+    -webkit-transform: translate(0, 0);
+            transform: translate(0, 0);
+  }
+}

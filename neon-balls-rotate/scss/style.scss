@@ -1,0 +1,71 @@
+@import "_fonts.scss";
+
+@import "_reset.scss";
+
+body {
+	background-color: rgb(2, 0, 3);
+}
+
+.page {
+	padding-top: 320px;
+	display: flex;
+	justify-content: center;
+}
+
+.animation {
+	display: flex;
+	gap: 20px;
+	position: relative;
+	width: 300px;
+	height: 300px;
+	&__neon-ball {
+		position: absolute;
+		width: 40px;
+		height: 40px;
+		background: radial-gradient(circle, #ff00ff, #ff0088, transparent);
+		border-radius: 50%;
+		box-shadow:
+			0 0 15px #ff00ff,
+			0 0 30px #ff00ff;
+		animation: move-ball 5s linear infinite;
+		&:nth-child(2) {
+			background: radial-gradient(circle, #00ffff, #0088ff, transparent);
+			box-shadow:
+				0 0 15px #00ffff,
+				0 0 30px #00ffff;
+			animation-delay: 1.25s;
+		}
+		&:nth-child(3) {
+			background: radial-gradient(circle, #ffff00, #ffaa00, transparent);
+			box-shadow:
+				0 0 15px #ffff00,
+				0 0 30px #ffff00;
+			animation-delay: 2.5s;
+		}
+		&:nth-child(4) {
+			background: radial-gradient(circle, #00ff00, #00aa00, transparent);
+			box-shadow:
+				0 0 15px #00ff00,
+				0 0 30px #00ff00;
+			animation-delay: 3.75s;
+		}
+	}
+}
+
+@keyframes move-ball {
+	0% {
+		transform: translate(0, 0);
+	}
+	25% {
+		transform: translate(100px, 0);
+	}
+	50% {
+		transform: translate(100px, 100px);
+	}
+	75% {
+		transform: translate(0, 100px);
+	}
+	100% {
+		transform: translate(0, 0);
+	}
+}
