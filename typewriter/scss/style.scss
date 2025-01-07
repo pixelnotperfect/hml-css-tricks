@@ -1,0 +1,41 @@
+@use "sass:math";
+
+@import "_fonts.scss";
+
+@import "_reset.scss";
+
+body {
+	background: #1e1e2f;
+	overflow: hidden;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 100vh;
+}
+
+.typewriter {
+	color: #ffffff;
+	font-size: 30px;
+	font-family: monospace;
+	overflow: hidden; 
+	border-right: 2px solid #ffffff;
+	white-space: nowrap; 
+	animation:
+		typing 4s steps(40) 1s 1 normal both,
+		blink 0.75s step-end infinite;
+}
+
+@keyframes typing {
+	from {
+		width: 0;
+	}
+	to {
+		width: 100%;
+	}
+}
+
+@keyframes blink {
+	50% {
+		border-color: transparent;
+	}
+}
